@@ -1,6 +1,6 @@
 import telebot as tb
 import imgtotext
-token='6900756428:AAE9vz5ebPUmK-27L-A-I4H0hrHCOvwvgyA'
+token=''
 bot= tb.TeleBot(token)
 @bot.message_handler(commands=['start'])
 def start_message(message):
