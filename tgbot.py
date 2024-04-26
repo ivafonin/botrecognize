@@ -5,6 +5,9 @@ bot= tb.TeleBot(token)
 @bot.message_handler(commands=['start'])
 def start_message(message):
   bot.send_message(message.chat.id,f"Привет, {message.from_user.first_name}. \nОтправь мне картинку и я преобразую ее в текст. 😀 ")
+@bot.message_handler(commands=['about'])
+def about_message(message):
+  bot.send_message(message.chat.id,f"Создал - Афонин Иван. Школа №1580")
 @bot.message_handler(content_types=['photo'])
 def reply(message):
     fileID = message.photo[-1].file_id
